@@ -1,40 +1,126 @@
 /*** Awesome Table ***/
-
-/* filtered results information : last - first / total number of result */
-.count {
-	border-top:1px solid #E5E5E5;
-	border-bottom:1px solid #E5E5E5;
+.card-content {
+	background-color: #000!important;
+	padding: 0px!important;
+}
+.card-content:hover {
+  box-shadow: rgba(0, 0, 0, 1) 0 8px 16px 0px!important;
 }
 
 /* loader progress bar */
 .loader {
-	background-color:#db4437;
-}
-
-/** Card view specific **/
-.viewCards .google-visualization-table-table {
-	background-color: transparent!important;
-}
-.viewCards .google-visualization-table-td {
-	border-color: #D8D8D8!important;
+	background-color:#F0141E;
 }
 
 /*** Google visualization override ***/
 
-/* page number display */
-.google-visualization-table-page-numbers {
-	display:none !important;
+
+/*** Configuration of FILTERS ***/
+
+/** Labels of filters **/
+.google-visualization-controls-label {
+	color:#333;
 }
 
-/* Table view header */
-.google-visualization-table-table .gradient,
-.google-visualization-table-div-page .gradient {
-	background: #F4F4F4 !important;
-	color:#444444;
+/** StringFilter **/
+.google-visualization-controls-stringfilter INPUT {
+	border:1px solid #d9d9d9!important;
+	color:#222;
+}
+.google-visualization-controls-stringfilter INPUT:hover {
+	border:1px solid #b9b9b9;
+	border-top:1px solid #a0a0a0;
+}
+.google-visualization-controls-stringfilter INPUT:focus {
+	border:1px solid #4d90fe;
 }
 
-/* selected/hovered row in a TABLE view */
-.google-visualization-table-tr-sel td,
-.google-visualization-table-tr-over td {
-	background-color: #FFFFCC!important;
+/** CategoryFilter **/
+.google-visualization-controls-categoryfilter .charts-menu-button,
+.google-visualization-controls-categoryfilter .charts-menu-button.charts-menu-button-hover,
+.google-visualization-controls-categoryfilter .charts-menu-button.charts-menu-button-active {
+	color:#444;
+	border:1px solid rgba(0,0,0,0.1);
+	background:none;
+	background:#ffffff;
+}
+.google-visualization-controls-categoryfilter LI{
+	background-color:#44444F!important;
+	color:#FFF;
+	height:25px;
+	vertical-align: middle;
+	border-radius: 5px;
+	line-height:25px;
+
+	}
+/* Croix du CategoryFilter */
+.google-visualization-controls-categoryfilter LI .charts-link-button {
+color:white!important;
+}
+/* CategoryFilter & csvFilter hovered item in the dropdown */
+.charts-menuitem-highlight {
+	background-color:#44444F!important;
+	border-color:#44444F!important;
+	color:#FFF;
+}
+
+/** NumberRangeFilter **/
+/* slider thumbs */
+.google-visualization-controls-slider-horizontal .google-visualization-controls-slider-thumb,
+.google-visualization-controls-slider-vertical .google-visualization-controls-slider-thumb {
+	background-color: #44444F!important;
+	border: 1px solid #444444;
+}
+/* label showing the current thumb value */
+.google-visualization-controls-rangefilter-thumblabel {
+	color:#444444!important;
+}
+
+.google-visualization-controls-categoryfilter .charts-menu-inner-box {
+background-color: #44444F!important;
+}
+.google-visualization-controls-slider-horizontal .google-visualization-controls-slider-thumb, .google-visualization-controls-slider-vertical .google-visualization-controls-slider-thumb {
+  background-color: #44444F!important;
+  border: 1px solid #44444F!important;
+}
+.google-visualization-controls-slider-horizontal {
+  border: 1px solid #DCDCDC!important;
+}
+.google-visualization-controls-slider-handle {
+  background-color: #DCDCDC!important;
+}
+
+.google-visualization-controls-label {
+font-weight: 500!important;	
+}
+
+
+
+@media (max-width: 550px) {
+  .mobile {
+margin: 10px auto 10px auto!important;
+float:none;
+  }
+.mobile-bis {
+margin : 10px!important;
+}
+div.google-visualization-controls-slider-thumb {
+  width: 25px!important;
+  border-radius: 1px!important;
+}
+div[id="controlersPanel"]{
+  text-align:center!important;
+  }
+div[id="controlers1"]{
+ margin:10px!important;
+  }
+}
+@media (min-width: 550px) {
+  .mobile {
+margin: 20px!important;
+float:left;
+  }
+.mobile-bis {
+margin : 20px!important;
+}
 }
